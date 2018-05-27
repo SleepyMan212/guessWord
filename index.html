@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-TW" >
+  <head>
+    <meta charset="utf-8">
+    <title>Guess Word</title>
+    <link rel="stylesheet" href="./main.css">
+  </head>
+  <body>
+    <div id="app">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <h2>score:{{grade}}</h2>
+          <h3 v-if="question">Q:{{question.chinese}}
+              <div class="status"> {{status}}</div>
+            </h3>
+          <ul>
+            <li v-for="option in options" @click="check(option)" :class="{correct:option.correct&amp;&amp;status=='correct',wrong:currentOption.english==option.english&amp;&amp;status=='wrong'}">{{option.english}} </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

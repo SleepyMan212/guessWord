@@ -1,0 +1,25 @@
+html, body {
+  background-color: #222;
+  color: #fff; }
+
+ul {
+  list-style: none;
+  padding: 0px; }
+  ul li {
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid white;
+    cursor: pointer;
+    font-size: 30px; }
+    ul li:hover {
+      background: rgba(255, 255, 255, 0.1); }
+    ul li.correct {
+      background-color: #38d138; }
+    ul li.wrong {
+      background-color: #ff7732; }
+
+.status {
+  float: right; }
+
+ul li {
+  border-radius: 10px; }
